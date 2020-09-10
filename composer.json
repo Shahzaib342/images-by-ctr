@@ -1,0 +1,16 @@
+{
+  "name": "co-op",
+  "description": "Autoloader for Co-op system",
+  "authors": [
+    {
+      "name": "Shahzaib",
+      "email": "shahzaibalihassan@gmail.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "Inc\\": "./Inc"
+    }
+  }
+}

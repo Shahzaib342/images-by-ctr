@@ -1,0 +1,56 @@
+/**
+ *
+ * @type {{Created by Shahzaib 07 Sep,2020}}
+ */
+
+body {
+    font-size: 14px sans-serif;
+}
+
+/**
+Global css
+*/
+
+.g-block {
+    display: block !important;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.g-dn {
+    display: none !important;
+}
+
+/**
+css for footer
+ */
+.page-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+}
+
+.page-footer div {
+    padding: 10px 0 0 0;
+}
+
+/**
+End
+ */
+
+.image-stats {
+    margin-top: 10px;
+}
+
+.image-stats span {
+    font-size: 14px !important;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
