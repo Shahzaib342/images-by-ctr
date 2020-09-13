@@ -12,11 +12,25 @@ var app = {};
         app.waitNotification = $(".text-wait");
         app.imageStats = $(".image-stats");
         app.errorNotification = $(".error");
+        //load images
+        app.getImage();
+        setInterval(function(){
+         app.getImage();
+          }, 120000);
+
+        //show timer
+        var $timer = 120;
+        setInterval(function(){
+         app.waitNotification.text('Loading next image in ' + $timer--);
+         app.waitNotification.removeClass('g-dn');
+         if($timer == 0) {
+            $timer = 120;
+         }
+          }, 1000);
     });
 
     //get random image by highest CTR from DB
     app.getImage = function () {
-        app.waitNotification.removeClass('g-dn');
         app.image.addClass("g-dn");
         app.imageStats.empty().addClass("g-dn");
         app.errorNotification.addClass("g-dn");
@@ -30,7 +44,6 @@ var app = {};
                 app.image.attr('src', response.data[0].URL);
                 app.image.attr('id', response.data[0].ID);
                 setTimeout(function () {
-                    app.waitNotification.addClass('g-dn');
                     app.imageStats.append('<span>ID: ' + response.data[0].ID + '</span><br>');
                     app.imageStats.append('<span>Hits: ' + response.data[0].HITS + '</span><br>');
                     app.imageStats.append('<span>Clicks: ' + response.data[0].CLICKS + '</span><br>');

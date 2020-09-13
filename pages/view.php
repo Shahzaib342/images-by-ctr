@@ -1,8 +1,7 @@
 <div class="container pt-3 d-block">
     <div class="row">
         <div class="span4 col-lg-4">
-            <a href="#" onclick="app.getImage();">Get Image</a><br>
-            <span class="text-wait g-dn">Please wait.........</span>
+            <span class="text-wait">Please wait.........</span>
             <div class="image-stats g-dn">
                 <label>Image Stats:</label><br>
             </div>
